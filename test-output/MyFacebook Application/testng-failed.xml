@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [MyFacebook Application]" parallel="none">
+  <parameter name="URL" value="https://www.facebook.com"/>
+  <groups>
+    <run>
+      <include name="ETE"/>
+    </run>
+  </groups>
+  <test thread-count="5" name=" End to End">
+    <classes>
+      <class name="com.selenium.xml.HomePage">
+        <methods>
+          <include name="getUrlTest"/>
+          <include name="checkButtonTest"/>
+        </methods>
+      </class> <!-- com.selenium.xml.HomePage -->
+      <class name="com.selenium.xml.LoginPage"/>
+    </classes>
+  </test> <!--  End to End -->
+  <test name=" End to End(failed)" parallel="none">
+    <groups>
+      <run>
+        <include name="ETE"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="com.selenium.xml.LoginPage">
+        <methods>
+          <include name="startMethodTest"/>
+          <include name="loginTest"/>
+        </methods>
+      </class> <!-- com.selenium.xml.LoginPage -->
+      <class name="com.selenium.xml.HomePage">
+        <methods>
+          <include name="getUrlTest"/>
+          <include name="checkButtonTest"/>
+          <include name="startMethodTest"/>
+        </methods>
+      </class> <!-- com.selenium.xml.HomePage -->
+    </classes>
+  </test> <!--  End to End(failed) -->
+</suite> <!-- Failed suite [MyFacebook Application] -->

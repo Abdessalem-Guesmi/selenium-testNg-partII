@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="MyFacebook_Application">
+	<groups>
+		<run>
+<!-- 			<include name="ETE"></include> -->
+		</run>
+	</groups>
+	<parameter name="URL" value="https://www.facebook.com"></parameter>
+	<test thread-count="5" name=" End to End">
+		<classes>
+			<class name="com.selenium.xml.LoginPage" />
+			<class name="com.selenium.xml.HomePage">
+				<methods>
+					<include name="getUrlTest"></include>
+					<include name="checkButtonTest"></include>
+				</methods>
+			</class>
+		</classes>
+		<!-- </test> Test End To end 3 test -->
+		<!-- <test thread-count="5" name=" Login Test"> -->
+		<!-- <classes> -->
+		<!-- <class name="com.selenium.xml.LoginPage"/> -->
+		<!-- </classes> -->
+		<!-- </test> Test login 1 test -->
+		<!-- <test thread-count="5" name=" Home Test"> -->
+		<!-- <classes> -->
+		<!-- <class name="com.selenium.xml.HomePage"/> -->
+
+		<!-- </classes> -->
+	</test> <!-- Test login 2 test -->
+</suite> <!-- Suite -->
