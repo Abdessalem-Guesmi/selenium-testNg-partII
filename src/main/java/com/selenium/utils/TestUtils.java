@@ -26,7 +26,7 @@ public class TestUtils extends TestBasic {
 		// don't forget to change the path of the file according to the location on your
 		// computer
 		FileInputStream inputStream = new FileInputStream(
-				"D:\\Training-WS\\selenium-testNg-part4\\src\\main\\java\\com\\application\\configuration\\config.properties");
+				"D:\\Training-WS\\selenium-testNg-partII\\src\\main\\java\\com\\application\\configuration\\config.properties");
 		properties.load(inputStream);
 	}
 
@@ -34,7 +34,7 @@ public class TestUtils extends TestBasic {
 		// Created object of ATUTestRecorder
 		// Provide path to store videos and file name format.
 
-		recorder = new ATUTestRecorder("D:\\Training-WS\\selenium-testNg-part4\\records", name, false);
+		recorder = new ATUTestRecorder("D:\\Training-WS\\selenium-testNg-partII\\records", name, false);
 		recorder.start();
 
 	}
@@ -45,7 +45,7 @@ public class TestUtils extends TestBasic {
 		// don't forget to change the path of the file according to the location on your
 		// computer
 
-		FileUtils.copyFile(srcFile, new File("D:\\Training-WS\\selenium-testNg-part4\\screenShots\\" + name + ".png"));
+		FileUtils.copyFile(srcFile, new File("D:\\Training-WS\\selenium-testNg-partII\\screenShots\\" + name + ".png"));
 	}
 
 }
